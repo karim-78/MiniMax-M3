@@ -1,0 +1,49 @@
+name: 💡 Capability Request for M3
+description: Tell us what M2.7 cannot do well today and what you want M3 to handle.
+title: "[M3 Request] "
+labels: ["enhancement", "m3-wishlist"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us prioritize M3. Be concrete — workloads, examples, and benchmarks beat abstract wishes.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Capability area
+      options:
+        - Agent harness / Agent Teams
+        - Skills / dynamic tool search
+        - Software engineering (SWE / VIBE / NL2Repo)
+        - Professional work (Word / Excel / PPT / GDPval)
+        - Tool calling
+        - Long context
+        - Multilingual
+        - Reasoning / math
+        - Character / entertainment
+        - Safety / alignment
+        - Deployment / inference
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What does M2.7 fail to do for you?
+      description: A concrete workload or task type, ideally with an example prompt.
+    validations:
+      required: true
+  - type: textarea
+    id: desired
+    attributes:
+      label: What would "good" look like in M3?
+      description: Behavior, output quality, latency, benchmark numbers — whatever applies.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Benchmarks, papers, competing models, prior issues, etc.
+    validations:
+      required: false

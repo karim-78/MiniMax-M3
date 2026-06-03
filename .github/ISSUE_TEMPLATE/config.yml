@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 WeChat community
+    url: https://platform.minimaxi.com/docs/faq/contact-us
+    about: Chinese-speaking community discussion.
+  - name: 🧩 Discord community
+    url: https://discord.com/invite/DPC4AHFCBw
+    about: English-speaking community discussion.
+  - name: ✉️ Email the model team
+    url: mailto:model@minimax.io
+    about: Private feedback, partnership, or evaluation requests.

@@ -1,0 +1,60 @@
+name: 🐛 M2.7 Bug Report
+description: Report a bug, regression, or unexpected behavior observed in MiniMax-M2.7 so it can be fixed in M3.
+title: "[M2.7 Bug] "
+labels: ["bug", "m2.7-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us shape M3. Please give us enough detail to reproduce the issue.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which inference path did you use?
+      options:
+        - MiniMax API
+        - MiniMax Agent
+        - SGLang
+        - vLLM
+        - Transformers
+        - NVIDIA NIM
+        - ModelScope
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: params
+    attributes:
+      label: Inference parameters
+      description: e.g. temperature=1.0, top_p=0.95, top_k=40, custom system prompt
+      placeholder: temperature=1.0, top_p=0.95, top_k=40
+    validations:
+      required: false
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt / input
+      description: Minimal prompt or trajectory that reproduces the issue.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Paste model output, error messages, or screenshots.
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Frequency, environment, hardware, related issues, etc.
+    validations:
+      required: false

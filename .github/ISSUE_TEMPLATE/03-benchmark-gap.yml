@@ -1,0 +1,40 @@
+name: 📊 Benchmark / Evaluation Gap
+description: Share an evaluation where M2.7 underperforms and you want M3 to improve.
+title: "[Eval] "
+labels: ["evaluation", "m2.7-feedback"]
+body:
+  - type: input
+    id: benchmark
+    attributes:
+      label: Benchmark name
+      placeholder: e.g. SWE-Pro, Toolathon, GDPval-AA, internal eval
+    validations:
+      required: true
+  - type: input
+    id: score
+    attributes:
+      label: M2.7 score (and reference score)
+      placeholder: e.g. M2.7 56.22%, Opus-4.6 60.1%
+    validations:
+      required: false
+  - type: textarea
+    id: setup
+    attributes:
+      label: Evaluation setup
+      description: How was M2.7 run? Inference path, params, prompt template, scaffold.
+    validations:
+      required: true
+  - type: textarea
+    id: failure
+    attributes:
+      label: Where does M2.7 fail?
+      description: Example items, failure modes, error categories.
+    validations:
+      required: true
+  - type: textarea
+    id: link
+    attributes:
+      label: Reproduction / link
+      description: Repo, dataset, paper, or trace.
+    validations:
+      required: false
